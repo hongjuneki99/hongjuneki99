@@ -1,0 +1,140 @@
+body{
+    height: 1080px;
+}
+#box0 {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height:30px;
+    left: 50%; transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #a61b1b;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#box1 {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height:50px;
+    left: 50%; transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #eeeeee;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+#box00 {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 800px;
+    left: 50%; transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #e3e3e3;
+    font-size: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+#box2 {
+    display: inline-flex;
+    position: relative;
+    width: 200px;
+    height: 70px;
+    background-color: #c8c8c8;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+#box3 {
+    display: inline-flex;
+    position: relative;
+    width: 200px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #adadad;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+#box4{
+    display: inline-flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #adadad;
+    font-size: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+#box5{
+    display: inline-flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #adadad;
+    font-size: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+
+
+#box6{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height:50px;
+    left: 50%; transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #eeeeee;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:20px;
+}
+
+
+.container {
+    display: flex;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#big {
+    display: block;
+    position: absolute;
+    width: 90%;
+    left:50%;
+    transform:translateX(-50%);
+}
