@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>anime.js</title>
+    <link href="1004b.css" rel="stylesheet">
+    <style>
+        #object1 {
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border-radius: 50;
+        }
+        #object2 {
+            position: fixed;
+            top: 350px;
+            left: 100px;
+            width: 150px;
+            height: 150px;
+            background-color:antiquewhite;
+        }
+        #object3 {
+            position: fixed;
+            top: 500px;
+            left: 100px;
+            width: 150px;
+            height: 150px;
+            background-color: #8338ec;
+        }
+        #object4 {
+            position: fixed;
+            top: 350px;
+            left: 100px;
+            width: 150px;
+            height: 150px;
+            background-color: #38ecb0;
+        }
+        #object5 {
+            position: fixed;
+            top: 500px;
+            left: 100px;
+            width: 150px;
+            height: 150px;
+            background-color: #d4ec38;
+        }
+        #object6 {
+            position: fixed;
+            top: 500px;
+            left: 100px;
+            width: 150px;
+            height: 150px;
+            background-color: #eca738;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="object1"></div>
+    <div id="object2"></div>
+    <div id="object3"></div>
+    <div id="object4"></div>
+    <div id="object5"></div>
+    <div id="object6"></div>
+    
+    <div class="wrap">
+    <div class="intro_bg">
+    <div class="header">
+    <div class="searchArea">
+    <form>
+    <input type="search" placeholder="Search">
+    <span>검색</span>
+    </form>
+    </div>
+
+    <ul class="nav">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+
+    
+<body>
+    <div id="slideshow-frame">
+        <div id="left-box">
+            <span id="btn-left" class="material-icons">star</span>
+        </div>
+        <div id="right-box">
+            <span id="btn-right" class="material-icons">star</span>
+        </div>
+        <div id="slides">
+            <img src="images/image01.jpg">
+            <img src="images/image02.mp4">
+            <img src="images/image03.jpg">
+            <img src="images/image04.jpg">
+        </div>
+    </div>
+   
+    
+
+    <!-- jQuery 라이브러리 연결 -->
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <!-- anime.js 라이브러리 연결 -->
+    <script type="text/javascript" src="js/anime.min.js"></script>
+
+    <script>
+
+        
+
+        $('#object1').on('mouseover', function(){
+            anime({
+                targets: '#object2',
+                left: '800px',
+                duration: 1000
+            });
+        });
+
+        $('#object1').on('mouseout', function(){
+            anime({
+                targets: '#object2',
+                left: '100px',
+                duration: 1000
+            });
+        });
+
+        $('#object1').on('mouseover', function(){
+            anime({
+                targets: '#object3',
+                left: '650px',
+                
+                backgroundColor: '#ff006e',
+                duration: 1000,
+               
+            });
+        });
+
+        $('#object1').on('mouseout', function(){
+            anime({
+                targets: '#object3',
+                left: '100px',
+                
+                backgroundColor: '#8338ec',
+                duration: 1000,
+                
+            });
+            
+        });
+
+        $('#object1').on('mouseover', function(){
+            anime({
+                targets: '#object4',
+                left: '500px',
+                
+                backgroundColor: '#38ecb0',
+                duration: 1000,
+               
+            });
+        });
+
+        $('#object1').on('mouseout', function(){
+            anime({
+                targets: '#object4',
+                left: '100px',
+                
+                backgroundColor: '#38ecb0',
+                duration: 1000,
+                
+            });
+                   });
+
+                   $('#object1').on('mouseover', function(){
+            anime({
+                targets: '#object5',
+                left: '350px',
+                
+                backgroundColor: '#d4ec3',
+                duration: 1000,
+               
+            });
+        });
+
+        $('#object1').on('mouseout', function(){
+            anime({
+                targets: '#object5',
+                left: '100px',
+                
+                backgroundColor: '#d4ec3',
+                duration: 1000,
+                
+            });
+                   });
+
+                   $('#object1').on('mouseover', function(){
+            anime({
+                targets: '#object6',
+                left: '950px',
+                
+                backgroundColor: '#eca73',
+                duration: 1000,
+               
+            });
+        });
+        
+        $('#object1').on('mouseout', function(){
+            anime({
+                targets: '#object6',
+                left: '100px',
+                
+                backgroundColor: '#eca73',
+                duration: 1000,
+                
+            });
+                   });
+
+                   var x=0;
+        var w=960; // 이미지의 너비
+        var n=4; // 이미지의 수
+
+        $('#btn-left').off('click').on('click', function(){
+            if(x>=2) {
+                $('#slides').animate({'left': '+='+w*(n-1)}, 300);
+                x = 0;
+            }
+            else {
+                $('#slides').animate({'left': '-='+w}, 300);
+                x = x+1;
+            }
+        });
+        
+        $('#btn-right').off('click').on('click', function(){
+            console.log(x);
+            if(x<=0) {
+                $('#slides').animate({'left': '-='+w*(n-1)}, 300);
+                x = (n-1);
+            }
+            else {
+                $('#slides').animate({'left': '+='+w}, 300);
+                x = x-1;
+            }
+        });
+
+
+    </script>
+</body>
+    
+</html>
